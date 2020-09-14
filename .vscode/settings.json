@@ -1,0 +1,7 @@
+{
+    "python.pythonPath": "/Users/timhuynh0905/opt/anaconda3/bin/python",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"],
+    "python.envFile": "$/Users/timhuynh0905/Documents/Photo_OCR_master/Photo_OCR/.env"
+}
