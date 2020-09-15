@@ -36,8 +36,8 @@ def generate_json(file_csv, short=True):
             'descendants': final[:,-1]
         }
     )
-    
-    csv_table_name = 'to_plunker_' + file_csv
+    csv_name = file_csv.split("/")[-1]
+    csv_table_name = 'to_plunker_' + csv_name
     final_dataset.to_csv(csv_table_name, index = False)
     plunker_inputs = pd.read_csv(csv_table_name).to_numpy()
     os.remove(csv_table_name);
@@ -53,7 +53,7 @@ def generate_json(file_csv, short=True):
     json_data = [{x: plunker_inputs[i,j] for (j, x) in enumerate(json_attrs)}
                     for i in range(plunker_inputs.shape[0])]
 
-    fileName = "plunker_inputs_" + file_csv.split(".")[0] + json_form + ".json"
+    fileName = "plunker_inputs_" + csv_name.split(".")[0] + json_form + ".json"
     localPath = "static/local_storage/output_storage/" + fileName
     with open(localPath, 'w') as outfile:
         simplejson.dump(json_data, outfile, ignore_nan=True) 
