@@ -63,7 +63,6 @@ def create_app():
     register_resources(app)
     return app
 
-
 def register_resources(app):
     api = flask_restful.Api(app)
     api.add_resources(UploadResource, '/upload_csv')
