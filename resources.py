@@ -27,7 +27,8 @@ def generate_json(file_csv, short=True):
         final[i[0],0] = n.replace(' ', '_')
     final_dataset = pd.DataFrame(
         {
-            'Title': final[:,0], 'ID': final[:,1], 
+            'Title': final[:,0],
+            'ID': final[:,1],
             'min_pval': final[:,2],
             'log_min_pval': final[:,3], 
             'interpolate': final[:,4],
