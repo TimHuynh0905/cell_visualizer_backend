@@ -19,29 +19,34 @@ class UploadResource(flask_restful.Resource):
             response.headers.add('Access-Control-Allow-Headers', "*")
             response.headers.add('Access-Control-Allow-Methods', "*")
             return response
-        elif flask.request.method == 'POST' and "csvData" in flask.request.files:
+        elif flask.request.method == 'POST' and "csv_data" in flask.request.files:
             try:
                 # receive csv file from frontend
-                file = flask.request.files['csvData']
+                file = flask.request.files['csv_data']
                 attachmentSet.save(file, folder="input_storage", name=file.filename)
-                attachmentPath = attachmentSet.path(folder="input_storage", name=file.filename)
+                attachmentPath = attachmentSet.path(folder="input_storage", filename=file.filename)
 
                 # generate json data
                 localPath, fileName = generate_json(file_csv=attachmentPath, short=True)
 
                 # upload json file to s3 bucket and send it back to frontend
+                s3_key = f"filesCollection/{fileName}"
+
                 s3Bucket.Bucket(os.environ.get("PROJECT_BUCKET")).upload_file(
                     Filename=localPath,
-                    Key=f"filesCollection/{fileName}",
+                    Key=s3_key,
                     ExtraArgs={'ACL': 'public-read'}
                 )
 
                 os.remove(localPath)
                 os.remove(attachmentPath)
 
-                contentObject = s3Bucket.Object(os.environ.get("PROJECT_BUCKET"), f"{fileName}")
-                jsonContent = json.loads(contentObject.get()['Body'].read().decode('utf-8'))
-                return jsonContent["Details"], http.HTTPStatus.ACCEPTED
+                return {
+                    "s3_key" : s3_key,
+                    "s3_bucket" : os.environ.get("PROJECT_BUCKET"),
+                    "aws_region" : os.environ.get("AWS_REGION"),
+                    "message" : "success"
+                       }, http.HTTPStatus.ACCEPTED
 
             except flask_uploads.UploadNotAllowed or Exception as e:
                 if flask_uploads.UploadNotAllowed:
