@@ -61,5 +61,5 @@ def generate_json(file_csv, short=True):
     return localPath, fileName
 
 if __name__ == "__main__" :
-    file_csv = "static/local_storage/input_storage/melanoma.csv"
+    file_csv = "melanoma.csv"
     generate_json(file_csv = file_csv, short = True)
