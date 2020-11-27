@@ -1,4 +1,12 @@
-import flask, flask_restful, flask_uploads, flask_cors, boto3, http, os, json, dotenv
+import boto3
+import dotenv
+import flask
+import flask_cors
+import flask_restful
+import flask_uploads
+import http
+import os
+
 from resources import generate_json
 
 dotenv.load_dotenv()
@@ -46,7 +54,7 @@ class UploadResource(flask_restful.Resource):
                     "s3_bucket" : os.environ.get("PROJECT_BUCKET"),
                     "aws_region" : os.environ.get("AWS_REGION"),
                     "message" : "success"
-                       }, http.HTTPStatus.ACCEPTED
+                }, http.HTTPStatus.ACCEPTED
 
             except flask_uploads.UploadNotAllowed or Exception as e:
                 if flask_uploads.UploadNotAllowed:
