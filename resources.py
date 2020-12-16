@@ -5,6 +5,25 @@ import simplejson
 from modules import *
 
 def generate_json(file_csv, short=True):
+    """
+    Generates json file from csv input
+
+    short form attributes:
+        'Title', 'ID', 'min_pval', 'log_min_pval', 'interpolate'
+    
+    long form attributes:
+        'Title', 'ID', 'min_pval', 'log_min_pval', 'interpolate', 
+        'init_pval', 'min_pval_children', 'descendants'
+
+    Inputs:
+    - file_csv: N x 5 .csv file; columns are GO id, GO name/label, Count DE, Count All, and Pval
+    - short: boolean, determines if json generated is in short or long form (default is True)
+
+    Outputs:
+    - localPath: str, path of output file
+    - fileName: str, file name of json output, formatted as "{}.json"
+
+    """
     data = pd.read_csv(file_csv).to_numpy()
     starting_nodes, starting_node_titles, starting_node_ids = get_starting_nodes(data)
     final_pvals = get_pvals_and_children_with_depth(data, starting_node_ids)
