@@ -1,13 +1,13 @@
 from ontobio.ontol_factory import OntologyFactory
 import obonet, math
 import numpy as np
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 
 
 ofactory = OntologyFactory()
-ont = ofactory.create('go.json')
-graph = obonet.read_obo('go.obo')
-soup  = BeautifulSoup(open('templates/cellLocation.html', 'r').read(), 'html.parser')
+ont = ofactory.create('files/go.json')
+graph = obonet.read_obo('files/go.obo')
+# soup  = BeautifulSoup(open('files/cellLocation.html', 'r').read(), 'html.parser')
 
 def get_starting_nodes(data):
     """
@@ -20,29 +20,58 @@ def get_starting_nodes(data):
     - nodes: N x 2 numpy array; columns are node titles and node id
     - node_titles: size N numpy array
     - node_id: size size N numpy array
-
     """
-    node_titles = []
-    titles = soup.find_all("g", title=True)
-    for title in titles:
-        temp = str(title)
-        a = temp.find("title")
-        b = temp.find(">")
-        name = temp[a+7:b-1]
-        if name[len(name)-3:] == 'ies':
-            name = name[:-3]
-            name = name + 'y'
-        if name[-1] == 's':
-            if name[-2] != 'u':
-                name = name[:-1]
-        if name[-1] == 'i':
-            name = name[:-1]
-            name = name + 'us'
-        if name[-1] == 'a':
-            name = name[:-1]
-            name = name + 'on'
-        if name.lower() not in node_titles:
-            node_titles.append(name.lower())
+    # node_titles = []
+
+    # titles = soup.find_all("g", title=True)
+    # for title in titles:
+    #     temp = str(title)
+    #     a = temp.find("title")
+    #     b = temp.find(">")
+    #     name = temp[a+7:b-1]
+    #     if name[len(name)-3:] == 'ies':
+    #         name = name[:-3]
+    #         name = name + 'y'
+    #     if name[-1] == 's':
+    #         if name[-2] != 'u':
+    #             name = name[:-1]
+    #     if name[-1] == 'i':
+    #         name = name[:-1]
+    #         name = name + 'us'
+    #     if name[-1] == 'a':
+    #         name = name[:-1]
+    #         name = name + 'on'
+    #     if name.lower() not in node_titles:
+    #         node_titles.append(name.lower())
+
+    # print(node_titles)
+
+    node_titles = [
+        'cytosol', 
+        'intermediate filament', 
+        'actin filament', 
+        'focal adhesion site', 
+        'microtubule organizing center', 
+        'centrosome', 
+        'microtubule', 
+        'microtubule end', 
+        'secreted protein', 
+        'lipid droplet', 
+        'lysosome', 
+        'peroxisome', 
+        'endosome', 
+        'endoplasmic reticulum', 
+        'golgi apparatus', 
+        'nucleoplasm', 
+        'nuclear membrane', 
+        'nuclear body', 
+        'nuclear speckle', 
+        'nucleolus', 
+        'nucleoli fibrillar center', 
+        'rods and ring', 
+        'mitochondrion', 
+        'plasma membrane'
+    ]
 
     name_to_id = {data['name'].lower(): id_ for id_, data in graph.nodes(data=True) if 'name' in data}
     node_ids = []

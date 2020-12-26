@@ -73,12 +73,13 @@ def generate_json(file_csv, short=True):
     json_data = [{x: plunker_inputs[i,j] for (j, x) in enumerate(json_attrs)}
                     for i in range(plunker_inputs.shape[0])]
 
-    fileName = "plunker_inputs_" + csv_name.split(".")[0] + json_form + ".json"
-    localPath = "static/local_storage/output_storage/" + fileName
-    with open(localPath, 'w') as outfile:
-        simplejson.dump(json_data, outfile, ignore_nan=True) 
+    # fileName = "plunker_inputs_" + csv_name.split(".")[0] + json_form + ".json"
+    # localPath = "static/local_storage/output_storage/" + fileName
+    # with open(localPath, 'w') as outfile:
+    #     simplejson.dump(json_data, outfile, ignore_nan=True) 
     
-    return localPath, fileName
+    # return localPath, fileName
+    return json_data
 
 if __name__ == "__main__" :
     file_csv = "melanoma.csv"
