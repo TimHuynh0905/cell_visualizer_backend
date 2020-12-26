@@ -46,32 +46,34 @@ def generate_json(file_csv, short=True):
         final[i[0],0] = n.replace(' ', '_')
     final_dataset = pd.DataFrame(
         {
-            'Title': final[:,0],
-            'ID': final[:,1],
-            'min_pval': final[:,2],
-            'log_min_pval': final[:,3], 
-            'interpolate': final[:,4],
-            'init_pval': final[:,5], 
-            'min_pval_children': final[:,6],
-            'descendants': final[:,-1]
+            "Title": final[:,0],
+            "ID": final[:,1],
+            "min_pval": final[:,2],
+            "log_min_pval": final[:,3], 
+            "interpolate": final[:,4],
+            "init_pval": final[:,5], 
+            "min_pval_children": final[:,6],
+            "descendants": final[:,-1]
         }
     )
     csv_name = file_csv.split("/")[-1]
-    csv_table_name = 'to_plunker_' + csv_name
+    csv_table_name = "to_plunker_" + csv_name
     final_dataset.to_csv(csv_table_name, index = False)
     plunker_inputs = pd.read_csv(csv_table_name).to_numpy()
     os.remove(csv_table_name);
     
     if short:
         json_form = ""
-        json_attrs = ['Title', 'ID', 'min_pval', 'log_min_pval', 'interpolate']
+        json_attrs = ["Title", "ID", "min_pval", "log_min_pval", "interpolate"]
     else:
         json_form = "_long"
-        json_attrs = ['Title', 'ID', 'min_pval', 'log_min_pval', 'interpolate', 'init_pval',
-                  'min_pval_children', 'descendants']
+        json_attrs = ["Title", "ID", "min_pval", "log_min_pval", "interpolate", "init_pval",
+                  "min_pval_children", "descendants"]
 
     json_data = [{x: plunker_inputs[i,j] for (j, x) in enumerate(json_attrs)}
                     for i in range(plunker_inputs.shape[0])]
+
+    json_data = simplejson.dumps(json_data, ignore_nan=True)
 
     # fileName = "plunker_inputs_" + csv_name.split(".")[0] + json_form + ".json"
     # localPath = "static/local_storage/output_storage/" + fileName

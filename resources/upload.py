@@ -21,8 +21,10 @@ class UploadResource(Resource):
 
             os.remove(attachmentPath)
 
+            print(json_data)
+
             return {
-                'json_data': json_data
+                "json_data": json_data
             }, HTTPStatus.CREATED
 
         except UploadNotAllowed or Exception as e:
