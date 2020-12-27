@@ -84,5 +84,6 @@ def generate_json(file_csv, short=True):
     return json_data
 
 if __name__ == "__main__" :
-    file_csv = "melanoma.csv"
-    generate_json(file_csv = file_csv, short = True)
+    file_csv = "files/csv_files/melanoma_sig.csv"
+    json_data = generate_json(file_csv = file_csv, short = True)
+    print(json_data)

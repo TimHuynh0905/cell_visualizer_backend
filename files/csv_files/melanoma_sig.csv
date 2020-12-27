@@ -1,0 +1,69 @@
+GO:0005737,cytoplasm,253,516,0.000024
+GO:0005829,cytosol,156,295,0.000054
+GO:0043228,non-membrane-bounded organelle,120,219,0.000092
+GO:0043232,intracellular non-membrane-bounded organelle,120,219,0.000092
+GO:0044444,cytoplasmic part,221,445,0.0001
+GO:0005634,nucleus,209,422,0.00034
+GO:0043231,intracellular membrane-bounded organelle,255,531,0.00035
+GO:0043229,intracellular organelle,273,577,0.00054
+GO:0030667,secretory granule membrane,9,9,0.00058
+GO:0044428,nuclear part,169,334,0.0007
+GO:0012505,endomembrane system,109,203,0.00075
+GO:0042175,nuclear outer membrane-endoplasmic reticulum membrane network,23,32,0.00106
+GO:0043227,membrane-bounded organelle,277,591,0.00145
+GO:0044446,intracellular organelle part,231,480,0.00149
+GO:0031981,nuclear lumen,163,324,0.00151
+GO:0005789,endoplasmic reticulum membrane,22,31,0.0018
+GO:0098827,endoplasmic reticulum subcompartment,22,31,0.0018
+GO:0043226,organelle,282,605,0.00209
+GO:0044422,organelle part,234,489,0.00222
+GO:0005856,cytoskeleton,57,99,0.0025
+GO:0000790,nuclear chromatin,28,43,0.00334
+GO:0000781,"chromosome, telomeric region",18,25,0.00379
+GO:0005730,nucleolus,35,57,0.00453
+GO:0000785,chromatin,39,65,0.00489
+GO:0005912,adherens junction,29,46,0.00573
+GO:0070161,anchoring junction,29,46,0.00573
+GO:0005622,intracellular,292,635,0.00655
+GO:0044424,intracellular part,292,635,0.00655
+GO:0005768,endosome,30,49,0.00915
+GO:0005654,nucleoplasm,149,302,0.00942
+GO:0000228,nuclear chromosome,42,74,0.01384
+GO:0044454,nuclear chromosome part,39,68,0.0141
+GO:0031974,membrane-enclosed lumen,189,395,0.01482
+GO:0043233,organelle lumen,189,395,0.01482
+GO:0070013,intracellular organelle lumen,189,395,0.01482
+GO:0070820,tertiary granule,7,8,0.01521
+GO:0044427,chromosomal part,54,99,0.01546
+GO:0000784,"nuclear chromosome, telomeric region",14,20,0.01588
+GO:0031410,cytoplasmic vesicle,62,116,0.01671
+GO:0097708,intracellular vesicle,62,116,0.01671
+GO:0005924,cell-substrate adherens junction,24,39,0.01799
+GO:0005925,focal adhesion,24,39,0.01799
+GO:0031967,organelle envelope,24,39,0.01799
+GO:0031975,envelope,24,39,0.01799
+GO:0031982,vesicle,95,187,0.01875
+GO:0098805,whole membrane,49,90,0.02205
+GO:0005794,Golgi apparatus,45,82,0.02368
+GO:0044430,cytoskeletal part,44,80,0.02407
+GO:0030659,cytoplasmic vesicle membrane,21,34,0.02523
+GO:0031090,organelle membrane,54,101,0.02548
+GO:0030055,cell-substrate junction,24,40,0.02689
+GO:0032587,ruffle membrane,9,12,0.02922
+GO:0034399,nuclear periphery,9,12,0.02922
+GO:0000786,nucleosome,6,7,0.03093
+GO:0044815,DNA packaging complex,6,7,0.03093
+GO:0031253,cell projection membrane,15,23,0.03096
+GO:0030054,cell junction,40,73,0.0336
+GO:0031256,leading edge membrane,10,14,0.03464
+GO:0044429,mitochondrial part,18,29,0.03545
+GO:0000788,nuclear nucleosome,4,4,0.03701
+GO:0000803,sex chromosome,4,4,0.03701
+GO:0031143,pseudopodium,4,4,0.03701
+GO:0031527,filopodium membrane,4,4,0.03701
+GO:0042581,specific granule,4,4,0.03701
+GO:0012506,vesicle membrane,21,35,0.03784
+GO:0031984,organelle subcompartment,27,47,0.03882
+GO:0098588,bounding membrane of organelle,44,82,0.04015
+GO:0070062,extracellular exosome,52,99,0.04215
+GO:0005694,chromosome,54,104,0.04958
