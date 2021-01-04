@@ -21,7 +21,7 @@ class UploadResource(Resource):
 
             os.remove(attachmentPath)
 
-            print(json_data)
+            # print(json_data)
 
             return {
                 "json_data": json_data

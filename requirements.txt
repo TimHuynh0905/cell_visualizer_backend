@@ -13,6 +13,7 @@ Flask==1.1.2
 Flask-Cors==3.0.9
 Flask-RESTful==0.3.8
 Flask-Uploads==0.2.1
+gunicorn==20.0.4
 httpie==2.3.0
 idna==2.10
 isodate==0.6.0
@@ -49,6 +50,6 @@ soupsieve==2.1
 SPARQLWrapper==1.8.5
 toml==0.10.2
 urllib3==1.26.2
-Werkzeug==1.0.1
+Werkzeug==0.16.0
 wrapt==1.12.1
 yamldown==0.1.8

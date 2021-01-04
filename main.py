@@ -1,18 +1,22 @@
-import dotenv
+import os
 from flask import Flask
 from flask_restful import Api
 from flask_uploads import configure_uploads
+from dotenv import load_dotenv
 
 from resources.upload import UploadResource
 from extensions import cors, file_set
-from config import DevelopmentConfig
+from config import Config, DevelopmentConfig
 
-dotenv.load_dotenv()
+load_dotenv()
 
 def create_app():
     app = Flask(__name__)
 
-    app.config.from_object(DevelopmentConfig)
+    if os.environ['ENV'] == 'dev':
+        app.config.from_object(DevelopmentConfig)
+    else:
+        app.config.from_object(Config)
     
     register_extensions(app)
     register_resources(app)
