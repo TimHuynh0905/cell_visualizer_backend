@@ -1,0 +1,236 @@
+GO:0044428,nuclear part,682,4093,4.60E-15
+GO:0005694,chromosome,199,908,2.20E-14
+GO:0005829,cytosol,757,4664,3.10E-14
+GO:0044427,chromosomal part,177,784,4.20E-14
+GO:0005622,intracellular,1754,12506,7.80E-14
+GO:0044424,intracellular part,1754,12506,7.80E-14
+GO:0000776,kinetochore,50,127,8.60E-14
+GO:0098687,chromosomal region,90,313,1.10E-13
+GO:0043228,non-membrane-bounded organelle,615,3697,3.60E-13
+GO:0031981,nuclear lumen,628,3791,4.10E-13
+GO:0005654,nucleoplasm,552,3262,5.20E-13
+GO:0031974,membrane-enclosed lumen,777,4866,5.90E-13
+GO:0043233,organelle lumen,777,4866,5.90E-13
+GO:0070013,intracellular organelle lumen,777,4866,5.90E-13
+GO:0043232,intracellular non-membrane-bounded organelle,612,3689,7.50E-13
+GO:0000775,"chromosome, centromeric region",60,180,1.70E-12
+GO:0005737,cytoplasm,1467,10177,2.30E-12
+GO:0005634,nucleus,946,6159,5.60E-12
+GO:0043226,organelle,1647,11703,2.10E-11
+GO:0044421,extracellular region part,478,2825,4.10E-11
+GO:0000793,condensed chromosome,60,194,5.60E-11
+GO:0000777,condensed chromosome kinetochore,38,96,6.70E-11
+GO:0000779,"condensed chromosome, centromeric region",40,106,1.20E-10
+GO:0044444,cytoplasmic part,1277,8769,1.60E-10
+GO:0043227,membrane-bounded organelle,1527,10766,2.00E-10
+GO:0070062,extracellular exosome,345,1956,3.90E-10
+GO:0044446,intracellular organelle part,1217,8335,5.70E-10
+GO:1903561,extracellular vesicle,347,1976,5.80E-10
+GO:0043230,extracellular organelle,347,1978,6.60E-10
+GO:0005615,extracellular space,433,2575,1.20E-09
+GO:0044422,organelle part,1247,8601,2.00E-09
+GO:0043229,intracellular organelle,1534,10936,1.80E-08
+GO:0031012,extracellular matrix,98,451,1.70E-07
+GO:0005819,spindle,75,319,2.00E-07
+GO:0062023,collagen-containing extracellular matrix,86,385,2.80E-07
+GO:0043231,intracellular membrane-bounded organelle,1324,9348,3.20E-07
+GO:0005912,adherens junction,102,482,3.70E-07
+GO:0015630,microtubule cytoskeleton,195,1074,5.60E-07
+GO:0000796,condensin complex,7,7,6.50E-07
+GO:0070161,anchoring junction,104,500,6.80E-07
+GO:0005856,cytoskeleton,318,1909,8.30E-07
+GO:0005576,extracellular region,561,3643,0.0000015
+GO:0000940,condensed chromosome outer kinetochore,9,12,0.0000017
+GO:0032991,protein-containing complex,628,4144,0.0000025
+GO:0005623,cell,1898,14113,0.0000034
+GO:0031982,vesicle,535,3493,0.0000059
+GO:0009986,cell surface,123,649,0.0000098
+GO:0001726,ruffle,42,165,0.000012
+GO:0030496,midbody,42,166,0.000014
+GO:0044464,cell part,1888,14057,0.000014
+GO:0005876,spindle microtubule,19,52,0.000015
+GO:0044430,cytoskeletal part,238,1430,0.000026
+GO:0030055,cell-substrate junction,80,392,0.000026
+GO:0005604,basement membrane,26,87,0.00003
+GO:0098589,membrane region,67,317,0.000038
+GO:0005925,focal adhesion,78,385,0.000043
+GO:0005924,cell-substrate adherens junction,78,387,0.000052
+GO:0042555,MCM complex,7,10,0.000054
+GO:0045121,membrane raft,64,305,0.00007
+GO:0098857,membrane microdomain,64,306,0.000078
+GO:0000922,spindle pole,37,150,0.000081
+GO:0000228,nuclear chromosome,89,463,0.000097
+GO:0005813,centrosome,89,463,0.000097
+GO:0048471,perinuclear region of cytoplasm,122,677,0.00011
+GO:0031252,cell leading edge,74,376,0.00017
+GO:1990752,microtubule end,11,26,0.00022
+GO:0005635,nuclear envelope,79,411,0.00024
+GO:0005815,microtubule organizing center,118,663,0.00024
+GO:0044454,nuclear chromosome part,81,425,0.00026
+GO:0012505,endomembrane system,590,4018,0.00026
+GO:0000942,condensed nuclear chromosome outer kinetochore,4,4,0.00029
+GO:0031262,Ndc80 complex,4,4,0.00029
+GO:0005901,caveola,22,78,0.0003
+GO:0000152,nuclear ubiquitin ligase complex,13,36,0.00039
+GO:0030141,secretory granule,133,775,0.00048
+GO:0031390,Ctf18 RFC-like complex,5,7,0.00063
+GO:0044853,plasma membrane raft,26,104,0.00071
+GO:0005913,cell-cell adherens junction,21,78,0.0008
+GO:0030054,cell junction,193,1196,0.00081
+GO:0098552,side of membrane,66,345,0.00084
+GO:0005911,cell-cell junction,74,397,0.00091
+GO:0099503,secretory vesicle,148,889,0.00091
+GO:0000785,chromatin,81,443,0.00097
+GO:0005652,nuclear lamina,6,11,0.00127
+GO:0030175,filopodium,24,97,0.0013
+GO:0032153,cell division site,16,55,0.00134
+GO:0032155,cell division site part,16,55,0.00134
+GO:0002178,palmitoyltransferase complex,5,8,0.00151
+GO:0044352,pinosome,5,8,0.00151
+GO:0044354,macropinosome,5,8,0.00151
+GO:0015629,actin cytoskeleton,77,424,0.00155
+GO:0044815,DNA packaging complex,18,66,0.00157
+GO:0005793,endoplasmic reticulum-Golgi intermediate compartment,26,110,0.0017
+GO:0034399,nuclear periphery,28,122,0.00186
+GO:0000151,ubiquitin ligase complex,44,218,0.00201
+GO:0097149,centralspindlin complex,3,3,0.00223
+GO:0032587,ruffle membrane,22,90,0.00238
+GO:0000781,"chromosome, telomeric region",30,136,0.0025
+GO:0035371,microtubule plus-end,7,16,0.00251
+GO:0032154,cleavage furrow,15,53,0.00253
+GO:0072686,mitotic spindle,23,96,0.00254
+GO:0031965,nuclear membrane,53,277,0.00257
+GO:0030133,transport vesicle,62,335,0.00269
+GO:1902494,catalytic complex,170,1068,0.00295
+GO:0032432,actin filament bundle,16,59,0.00297
+GO:0071204,histone pre-mRNA 3'end processing complex,4,6,0.0035
+GO:0031091,platelet alpha granule,21,88,0.00402
+GO:0005874,microtubule,63,348,0.00423
+GO:0001725,stress fiber,15,56,0.0045
+GO:0097517,contractile actin filament bundle,15,56,0.0045
+GO:0044309,neuron spine,30,142,0.0049
+GO:0005938,cell cortex,43,222,0.00493
+GO:0045171,intercellular bridge,15,57,0.00539
+GO:0042383,sarcolemma,27,125,0.0054
+GO:0005614,interstitial matrix,5,10,0.0054
+GO:0000790,nuclear chromatin,51,274,0.00542
+GO:0031362,anchored component of external side of plasma membrane,6,14,0.00581
+GO:0005730,nucleolus,136,849,0.00599
+GO:0030134,COPII-coated ER to Golgi transport vesicle,16,63,0.00599
+GO:0030135,coated vesicle,47,250,0.0061
+GO:0043197,dendritic spine,29,139,0.00672
+GO:0030660,Golgi-associated vesicle membrane,21,92,0.00692
+GO:0000778,condensed nuclear chromosome kinetochore,4,7,0.00733
+GO:0016604,nuclear body,116,717,0.00787
+GO:0005757,mitochondrial permeability transition pore complex,3,4,0.00804
+GO:0005862,muscle thin filament tropomyosin,3,4,0.00804
+GO:0030485,smooth muscle contractile fiber,3,4,0.00804
+GO:0032133,chromosome passenger complex,3,4,0.00804
+GO:0031093,platelet alpha granule lumen,16,65,0.00823
+GO:0031461,cullin-RING ubiquitin ligase complex,26,123,0.00834
+GO:0012507,ER to Golgi transport vesicle membrane,13,49,0.00861
+GO:0071437,invadopodium,6,15,0.00863
+GO:0031094,platelet dense tubular network,5,11,0.00885
+GO:0005923,bicellular tight junction,24,112,0.00926
+GO:0042641,actomyosin,16,66,0.00958
+GO:0005680,anaphase-promoting complex,7,20,0.01059
+GO:0009897,external side of plasma membrane,37,194,0.01103
+GO:0033116,endoplasmic reticulum-Golgi intermediate compartment membrane,16,67,0.0111
+GO:0031410,cytoplasmic vesicle,308,2101,0.01169
+GO:0030663,COPI-coated vesicle membrane,6,16,0.01231
+GO:0097708,intracellular vesicle,308,2104,0.01257
+GO:1990234,transferase complex,95,583,0.01257
+GO:0043296,apical junction complex,26,127,0.01261
+GO:0005794,Golgi apparatus,207,1374,0.013
+GO:0043218,compact myelin,5,12,0.01356
+GO:0030662,coated vesicle membrane,31,159,0.01392
+GO:0090734,site of DNA damage,15,63,0.01405
+GO:0031234,extrinsic component of cytoplasmic side of plasma membrane,13,52,0.01435
+GO:0099568,cytoplasmic region,66,389,0.01493
+GO:0098562,cytoplasmic side of membrane,27,135,0.01508
+GO:0044420,extracellular matrix component,12,47,0.01548
+GO:0070160,tight junction,24,117,0.01571
+GO:0030667,secretory granule membrane,50,284,0.01653
+GO:0097447,dendritic tree,82,500,0.01669
+GO:0098858,actin-based cell projection,36,193,0.01678
+GO:0005657,replication fork,13,53,0.0168
+GO:0044291,cell-cell contact zone,16,70,0.01681
+GO:0005608,laminin-3 complex,2,2,0.01707
+GO:0016222,procollagen-proline 4-dioxygenase complex,2,2,0.01707
+GO:0032301,MutSalpha complex,2,2,0.01707
+GO:0042571,"immunoglobulin complex, circulating",2,2,0.01707
+GO:0071753,IgM immunoglobulin complex,2,2,0.01707
+GO:0071754,"IgM immunoglobulin complex, circulating",2,2,0.01707
+GO:0071756,pentameric IgM immunoglobulin complex,2,2,0.01707
+GO:0097125,cyclin B1-CDK1 complex,2,2,0.01707
+GO:0098805,whole membrane,228,1536,0.01749
+GO:0009898,cytoplasmic side of plasma membrane,23,112,0.01755
+GO:0000408,EKC/KEOPS complex,3,5,0.01815
+GO:0005663,DNA replication factor C complex,3,5,0.01815
+GO:0033093,Weibel-Palade body,3,5,0.01815
+GO:0070765,gamma-secretase complex,3,5,0.01815
+GO:0097418,neurofibrillary tangle,3,5,0.01815
+GO:0098826,endoplasmic reticulum tubular network membrane,3,5,0.01815
+GO:0097346,INO80-type complex,7,22,0.01844
+GO:0051233,spindle midzone,8,27,0.01875
+GO:0030425,dendrite,81,498,0.02081
+GO:1904813,ficolin-1-rich granule lumen,24,120,0.02104
+GO:0000145,exocyst,4,9,0.02124
+GO:0031095,platelet dense tubular network membrane,4,9,0.02124
+GO:0035861,site of double-strand break,12,49,0.02139
+GO:0016363,nuclear matrix,21,102,0.02193
+GO:0044433,cytoplasmic vesicle part,207,1393,0.02206
+GO:0046930,pore complex,6,18,0.02268
+GO:0000784,"nuclear chromosome, telomeric region",21,103,0.02426
+GO:0042470,melanosome,21,103,0.02426
+GO:0048770,pigment granule,21,103,0.02426
+GO:0060205,cytoplasmic vesicle lumen,55,324,0.02429
+GO:0036477,somatodendritic compartment,110,704,0.02456
+GO:0014704,intercalated disc,12,50,0.0249
+GO:0031983,vesicle lumen,55,325,0.02564
+GO:0005798,Golgi-associated vesicle,26,135,0.02632
+GO:0099081,supramolecular polymer,117,756,0.02701
+GO:0005769,early endosome,55,326,0.02704
+GO:0018995,host,15,68,0.02738
+GO:0043657,host cell,15,68,0.02738
+GO:0045120,pronucleus,5,14,0.02741
+GO:0099080,supramolecular complex,117,757,0.02795
+GO:0099512,supramolecular fiber,116,750,0.02802
+GO:0044451,nucleoplasm part,147,972,0.0295
+GO:0031233,intrinsic component of external side of plasma membrane,6,19,0.02958
+GO:0071782,endoplasmic reticulum tubular network,6,19,0.02958
+GO:0016528,sarcoplasm,16,75,0.03103
+GO:0005885,Arp2/3 protein complex,4,10,0.0318
+GO:0017059,serine C-palmitoyltransferase complex,3,6,0.0328
+GO:0031211,endoplasmic reticulum palmitoyltransferase complex,3,6,0.0328
+GO:0044327,dendritic spine head,3,6,0.0328
+GO:0097136,Bcl-2 family protein complex,3,6,0.0328
+GO:1905961,protein-cysteine S-palmitoyltransferase complex,3,6,0.0328
+GO:0034774,secretory granule lumen,52,310,0.03389
+GO:0044432,endoplasmic reticulum part,182,1229,0.03423
+GO:0031011,Ino80 complex,5,15,0.0368
+GO:0033202,DNA helicase complex,5,15,0.0368
+GO:0005783,endoplasmic reticulum,244,1684,0.03766
+GO:0098590,plasma membrane region,163,1096,0.03826
+GO:0043209,myelin sheath,10,42,0.04069
+GO:0030027,lamellipodium,33,187,0.04333
+GO:0012506,vesicle membrane,111,728,0.04387
+GO:0032585,multivesicular body membrane,4,11,0.04492
+GO:0005899,insulin receptor complex,2,3,0.04675
+GO:0005967,mitochondrial pyruvate dehydrogenase complex,2,3,0.04675
+GO:0009331,glycerol-3-phosphate dehydrogenase complex,2,3,0.04675
+GO:0030934,anchoring collagen complex,2,3,0.04675
+GO:0031597,cytosolic proteasome complex,2,3,0.04675
+GO:0032300,mismatch repair complex,2,3,0.04675
+GO:0034666,integrin alpha2-beta1 complex,2,3,0.04675
+GO:0097452,GAIT complex,2,3,0.04675
+GO:1901588,dendritic microtubule,2,3,0.04675
+GO:1990423,RZZ complex,2,3,0.04675
+GO:0031256,leading edge membrane,27,149,0.04758
+GO:0000780,"condensed nuclear chromosome, centromeric region",5,16,0.04793
+GO:0030014,CCR4-NOT complex,5,16,0.04793
+GO:0000794,condensed nuclear chromosome,15,73,0.04833
+GO:0044215,other organism,15,73,0.04833
+GO:0044216,other organism cell,15,73,0.04833
+GO:0044217,other organism part,15,73,0.04833
+GO:0005788,endoplasmic reticulum lumen,49,297,0.04939
