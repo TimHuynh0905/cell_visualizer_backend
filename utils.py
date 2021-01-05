@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 import simplejson
+from orangecontrib.bio.ontology import OBOOntology
 from gene_ontology_module import *
 
 def generate_json(file_csv, short=True):
@@ -25,8 +26,9 @@ def generate_json(file_csv, short=True):
 
     """
     data = pd.read_csv(file_csv).to_numpy()
-    starting_nodes, starting_node_titles, starting_node_ids = get_starting_nodes(data)
-    final_pvals = get_pvals_and_children_with_depth(data, starting_node_ids)
+    obi = OBOOntology('files/go.obo')
+    starting_nodes, starting_node_titles, starting_node_ids = get_starting_nodes(obi, data)
+    final_pvals = get_pvals_and_children_with_depth(obi, data, starting_node_ids)
     log_min_pvals = log_arr(final_pvals[:,0].tolist(), includeNone=True)
 
     max_log_min_pval = 0

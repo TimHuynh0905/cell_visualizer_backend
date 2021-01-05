@@ -1,12 +1,8 @@
 import math
 import numpy as np
-from orangecontrib.bio.ontology import OBOOntology
 # from bs4 import BeautifulSoup
 
-
-obi = OBOOntology('files/go.obo')
-
-def get_starting_nodes(data):
+def get_starting_nodes(obi, data):
     """
     Gets the starting node titles from an html template and the corresponding ids from a csv input
 
@@ -85,7 +81,27 @@ def get_starting_nodes(data):
 
     return nodes, node_titles, node_ids
 
-def search_children_with_depth(source):
+def get_pvals_and_children_with_depth(obi, data, starting_node_ids):
+    pvals = np.empty([len(starting_node_ids), 4], dtype='object')
+    for i in range(len(starting_node_ids)):
+        node = starting_node_ids[i]
+        children_with_depth = search_children_with_depth(obi, node)
+        
+        pvals[i,0] = min_pval(children_with_depth[:,0], data)
+        for j in range(len(data[:,0])):
+            if node == data[j,0]:
+                pvals[i,1] = data[j,4]
+                break
+        
+        non_represented_children = [x for x in children_with_depth[:,0] if x not in starting_node_ids]
+        pvals[i,2] = min_pval(non_represented_children, data)
+                        
+        graph = map_graph_level_with_children(obi, data, children_with_depth)
+        str_graph = "\n".join(("{}: {}".format(*j) for j in graph.items()))
+        pvals[i,3] = str_graph        
+    return pvals
+
+def search_children_with_depth(obi, source):
     level = 0
     depths = []
     explored = []
@@ -106,27 +122,7 @@ def search_children_with_depth(source):
                          axis=1)
     return explored_with_depth
 
-def get_pvals_and_children_with_depth(data, starting_node_ids):
-    pvals = np.empty([len(starting_node_ids), 4], dtype='object')
-    for i in range(len(starting_node_ids)):
-        node = starting_node_ids[i]
-        children_with_depth = search_children_with_depth(node)
-        
-        pvals[i,0] = min_pval(children_with_depth[:,0], data)
-        for j in range(len(data[:,0])):
-            if node == data[j,0]:
-                pvals[i,1] = data[j,4]
-                break
-        
-        non_represented_children = [x for x in children_with_depth[:,0] if x not in starting_node_ids]
-        pvals[i,2] = min_pval(non_represented_children, data)
-                        
-        graph = map_graph_level_with_children(data, children_with_depth)
-        str_graph = "\n".join(("{}: {}".format(*j) for j in graph.items()))
-        pvals[i,3] = str_graph        
-    return pvals
-
-def map_graph_level_with_children(data, children_with_depth):
+def map_graph_level_with_children(obi, data, children_with_depth):
     def map_id_to_label_and_pval(id):
         label = obi.term(id).name
         mask = data[:,0] == id
