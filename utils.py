@@ -2,7 +2,7 @@ import os
 import pandas as pd
 import numpy as np
 import simplejson
-from modules import *
+from gene_ontology_module import *
 
 def generate_json(file_csv, short=True):
     """
@@ -27,9 +27,16 @@ def generate_json(file_csv, short=True):
     data = pd.read_csv(file_csv).to_numpy()
     starting_nodes, starting_node_titles, starting_node_ids = get_starting_nodes(data)
     final_pvals = get_pvals_and_children_with_depth(data, starting_node_ids)
-    log_min_pvals = log_arr(final_pvals[:,0].tolist(),includeNone=True)
-    mx_log = max(log_arr(final_pvals[:,0].tolist()))
-    interpolate_vals = np.array([round(x / mx_log, 6) if x is not None else None for x in log_min_pvals])[:, np.newaxis]
+    log_min_pvals = log_arr(final_pvals[:,0].tolist(), includeNone=True)
+
+    max_log_min_pval = 0
+    for value in log_min_pvals:
+        if value and value > max_log_min_pval:
+            max_log_min_pval = value
+    # print(max_log_min_pval)
+
+    max_log_min_pval = max(log_arr(final_pvals[:,0].tolist()))
+    interpolate_vals = np.array([round(x / max_log_min_pval, 6) if x is not None else None for x in log_min_pvals])[:, np.newaxis]
     final_pvals = np.concatenate(
         [   
             final_pvals[:,:-3],
@@ -74,16 +81,9 @@ def generate_json(file_csv, short=True):
                     for i in range(plunker_inputs.shape[0])]
 
     json_data = simplejson.dumps(json_data, ignore_nan=True)
-
-    # fileName = "plunker_inputs_" + csv_name.split(".")[0] + json_form + ".json"
-    # localPath = "static/local_storage/output_storage/" + fileName
-    # with open(localPath, 'w') as outfile:
-    #     simplejson.dump(json_data, outfile, ignore_nan=True) 
-    
-    # return localPath, fileName
     return json_data
 
 if __name__ == "__main__" :
-    file_csv = "files/csv_files/melanoma_sig.csv"
+    file_csv = "files/csv_files/melanoma.csv"
     json_data = generate_json(file_csv = file_csv, short = True)
     print(json_data)
